@@ -1,0 +1,125 @@
+<ion-header>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <ion-toolbar>
+    <ion-icon style="font-size: 190%; float:left;" color="dark" (click)="toItem()" name="arrow-back"></ion-icon>
+    <ion-title>{{infos[2]}}</ion-title>    <ion-icon style="font-size: 150%; float:right;" color="dark" (click)="share()" name="share-social-outline"></ion-icon>
+
+  </ion-toolbar>
+<style>
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition:none;
+  width: 100%;
+  margin: 0%;
+}
+
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+#i{height:300px;}
+    .p-image {
+      font-size: 150%;
+  position: absolute;
+  top: 215px;
+  left: 10px;
+  font-family:'noto';
+      color: aliceblue;
+
+}
+.p-image:hover {
+  color:rgb(85, 85, 85);
+}
+
+.p2-image {
+      font-size: 80%;
+  position: absolute;
+  top: 250px;
+  right: 10px;
+  
+
+}
+.p3-image {
+      font-size: 130%;
+  position: absolute;
+  top: 8px;
+  right:9px;
+  
+
+}
+
+</style>
+</ion-header>
+
+<ion-content>
+  <div class="card">
+    <div><img src=" " id="i" alt="Avatar" style="width:100%"></div>  
+    <div class="p2-image">
+      <ion-button  (click)="add_fav()" color="medium" id="add">  <ion-icon name="add"></ion-icon> Add to favourite</ion-button>
+    </div>
+    <div class="p3-image">
+      
+
+    </div>
+    <div id="tt"  class="p-image">
+     {{infos[2]}}
+   </div>
+     </div>
+      <ion-list>
+     <div id="des">
+
+     </div>
+<ion-item><ion-label>     {{au}}        </ion-label></ion-item>
+        <ion-item-divider>
+          <ion-label>
+            Description :
+          </ion-label>
+        </ion-item-divider>
+      
+        <p style="padding:10%" id="d">  </p>
+       
+      
+        <ion-item-divider>
+          <ion-label>
+            Category :
+          </ion-label>
+        </ion-item-divider>
+      
+        <ion-item><ion-label>     {{infos[4]}}        </ion-label></ion-item>
+       
+        <ion-item-divider>
+          <ion-label>
+            Audience :
+          </ion-label>
+        </ion-item-divider>
+      
+        <ion-item><ion-label id="aud">            </ion-label></ion-item>
+
+        <ion-item-divider>
+          <ion-label>
+            Evaluation :
+          </ion-label>
+        </ion-item-divider>
+<div id="evaluated">
+       <div id="eval"> <ion-button  (click)="eva()">Evaluate</ion-button></div>
+        <div id="ev"> 
+            <ion-item> 
+              <ion-label>Evaluation</ion-label> 
+              <ion-select (ionFocus)="evaluation($event)" value="3" okText="Okay" cancelText="Dismiss"> 
+                <ion-select-option value="1">1/5</ion-select-option>
+                 <ion-select-option value="2">2/5</ion-select-option> 
+                <ion-select-option value="3">3/5</ion-select-option> 
+                <ion-select-option value="4">4/5</ion-select-option>
+                 <ion-select-option value="5">5/5</ion-select-option> 
+                </ion-select> </ion-item> 
+                <ion-button  (click)="add_eval()">Save</ion-button> 
+                <ion-button color="medium" (click)="can()">Cancel</ion-button>
+              </div>
+</div>
+        
+        
+      </ion-list>
+   
+</ion-content>

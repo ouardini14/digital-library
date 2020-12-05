@@ -1,0 +1,7 @@
+{
+  "name": "MyLibrary",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}

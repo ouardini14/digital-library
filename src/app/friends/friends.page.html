@@ -1,0 +1,32 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-icon style="font-size: 190%; float:left;" color="dark" (click)="toItem()" name="arrow-back"></ion-icon>
+
+    <ion-title>friends</ion-title>
+    
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+ 
+  <!-- fab placed in the center of the content with a list on each side -->
+  <ion-fab (click)="add_fr()" vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button>
+      <ion-icon name="add"></ion-icon>
+    </ion-fab-button>
+   
+  </ion-fab>
+  <ion-fab (click)="refre()" vertical="bottom" horizontal="start" slot="fixed">
+    <ion-fab-button>
+      <ion-icon name="refresh"></ion-icon>
+    </ion-fab-button>
+   
+  </ion-fab>
+<div id="li">
+  <ion-list id="ll">
+  
+   
+  </ion-list>
+</div>
+
+</ion-content>

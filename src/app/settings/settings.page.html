@@ -1,0 +1,70 @@
+<ion-header>
+  <style>
+     #a {
+      font-size: 80%;
+      
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+      color: #5F5F5F;
+    }
+  </style>
+  <ion-toolbar>
+    <ion-title style="text-align:center;">settings</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+<ion-card color="white">
+
+  <ion-item>
+    <ion-label  position="stacked">Username</ion-label>
+    <ion-input id="username" type="text" readonly></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="stacked">Email address</ion-label>
+    <ion-input id="email" type="email"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="stacked">First name</ion-label>
+    <ion-input id="fname" type="text"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="stacked">Last name</ion-label>
+    <ion-input id="lname" type="text"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="stacked">New password</ion-label>
+    <ion-input id="password" placeholder="tap your new password" type="password" ></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="stacked">Confirm password</ion-label>
+    <ion-input id="cpassword" placeholder="confirm new password" type="password" ></ion-input>
+  </ion-item><br>
+  
+  <ion-grid>
+    <ion-row>
+      <ion-col class="ion-float-left">
+        <div>
+          <ion-button (click)="cancel()" color="medium">Cancel</ion-button>
+        </div>
+      </ion-col>
+      <ion-col class="ion-float-right">
+        <div>
+          <ion-button  (click)="save()" color="success">Save</ion-button>
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <br><br>
+  <ion-item>
+    <p id="a">*if you want to change you username contact support</p>
+   </ion-item>
+
+  
+
+</ion-card>
+</ion-content>
