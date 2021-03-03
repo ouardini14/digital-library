@@ -123,7 +123,7 @@ function connect_db(username,password){
         if(snapshot.exists()) {db.ref('user/'+username+'/info/password').on("value", function(snapshot) {
 
              if (password==snapshot.val()) {
-               window.location.href = '/home' ;}
+               window.location.href = '/item/'+username ;}
              else {alert_field("password incorrect");}
             }     
             );
